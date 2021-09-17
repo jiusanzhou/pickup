@@ -6,7 +6,7 @@
 
 
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?logo=github)](README.md) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fopencrawlers.org&logo=hoppscotch)](https://opencrawlers.org/) [![Tests](https://github.com/jisuanzhou/pickup/actions/workflows/tests.yml/badge.svg)](https://github.com/jisuanzhou/pickup/actions)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?logo=github)](README.md) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fopencrawlers.org&logo=hoppscotch)](https://opencrawlers.org/) [![Tests](https://github.com/jiusanzhou/pickup/actions/workflows/tests.yml/badge.svg)](https://github.com/jiusanzhou/pickup/actions)
 
 </div>
 
