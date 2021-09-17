@@ -20,7 +20,8 @@ const SchemeEditor = ({ appStore, stateStore, ...props }) => {
             <CustomRadioGroup colorScheme={appStore.colorScheme}
                 onChange={(v) => setViewMode(v)} defaultValue={viewMode} items={{
                     tree: 'Tree',
-                    json: 'JSON'
+                    json: 'JSON',
+                    yaml: 'YAML',
                 }} />
 
             <Box></Box>

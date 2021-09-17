@@ -49,8 +49,6 @@ module.exports = {
                         target: "</head>"
                     }))
                 },
-                after: (app, server, compiler)=> {
-                },
                 proxy: [
                     {
                         // https://github.com/chimurai/http-proxy-middleware

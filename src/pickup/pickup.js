@@ -1,6 +1,5 @@
-import getCssSelector from 'css-selector-generator';
 import genCss from './css-selector';
-import { cssToXPath } from "potent-tools";
+import cssToXPath from "./cssxpath";
 import { getAllParents } from "./dom"
 
 const config = {
