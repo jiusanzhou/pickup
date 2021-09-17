@@ -1,0 +1,71 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+::-webkit-scrollbar{
+    width:5px;
+    height:5px;
+    border-radius:5px;
+    background-color:#f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius:5px;
+    background-color:#c0c0c0;
+}
+
+/* *:focus:not(input):not([data-focus]), *:active:not(input):not([data-focus]) {
+    box-shadow: none !important;
+    outline: none !important;
+} */
+
+li:focus, li:active,
+button:focus, button:active,
+[role="dialog"], [data-focus]{
+    box-shadow: none !important;
+    outline: none !important; 
+}
+
+html {
+    /* it's important to ui */
+    font-size: 16px !important;
+}
+
+/* Pickup css style */
+#__pickup-ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+[__pickup__state="hover"] {
+    outline-style: dashed !important;
+    outline-width: 2px !important;
+    cursor: crosshair !important;
+    /* pointer-events: none !important; */
+}
+
+[__pickup__state="linked"] {
+    outline-style: dashed !important;
+    outline-width: 3px !important;
+    cursor: crosshair !important;
+}
+
+[__pickup__state="picked"] {
+    outline-style: solid !important;
+    outline-width: 3px !important;
+}
+
+[__pickup__state] {
+    outline-color: #286efa;
+    /* box-shadow: 0 0 20px #286efa; */
+    transition: all .16s ease;
+}
+
+.___highlight {
+    
+    /* highlight special area */
+    box-shadow: rgb(20 156 244) 0px 0px 0px 3px, rgb(0 0 0 / 35%) 0px 0px 0px 4000px
+}
