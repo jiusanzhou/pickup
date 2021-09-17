@@ -19,7 +19,6 @@ Pickup is a web-based tool for creating css/xpath rules and scraping data from t
 - **Lightweight**: No need to install any things, including the browser plugins.
 - **Flexible**: We supported `local development`, `server` and `service worker`.
 - **Friendly**: A user friendly UI that help you to create your data adn rules fast.
-- **Lightweight**: 
 
 ### Modes compares
 
@@ -36,7 +35,7 @@ There is no any production-ready version released. The `local development` mode 
     yarn && yarn start
     ```
 3. Waiting for prcessing finished, and open the development server,
-Atmost is `http://localhost:3000`
+most of `http://localhost:3000`
 
 ### `Service Worker` mode
 
