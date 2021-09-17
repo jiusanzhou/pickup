@@ -14,6 +14,8 @@
 
 Pickup is a web-based tool for creating css/xpath rules and scraping data from the internet by clicking. 
 
+**Only tested in Chrome.**
+
 ### Features
 
 - **Lightweight**: No need to install any things, including the browser plugins.
