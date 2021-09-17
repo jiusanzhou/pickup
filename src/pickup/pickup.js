@@ -1,6 +1,7 @@
 import getCssSelector from 'css-selector-generator';
 import genCss from './css-selector';
 import { cssToXPath } from "potent-tools";
+import { getAllParents } from "./dom"
 
 const config = {
   prefix: '__pickup__',
@@ -227,11 +228,15 @@ class Pickup {
 
   _filter(e) {
     // ignore _execptElements
-    for (let i = 0; i < this._execptElements.length; i++) {
-      if (e.path.includes(this._execptElements[i])) return true;
-    }
 
     let target = e.target || e.srcElement;
+
+    // firefox don't has path prop
+    if (!e.path) e.path = [e.target, ...getAllParents(target, null)]
+
+    for (let i = 0; i < this._execptElements.length; i++) {
+      if (e.path && e.path.includes(this._execptElements[i])) return true;
+    }
 
     // ignore the body
     return !target || target.localName === 'body';
