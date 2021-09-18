@@ -20,6 +20,7 @@ import CustomMenu from '../components/menu';
 
 import SiteInfo from "../views/site-info";
 import CustomSwitch from "../components/form/switch";
+import Resizer from '../components/resizer';
 
 // dynamic height and width 30rem
 
@@ -77,6 +78,10 @@ const _positions = {
             boxShadow: "rgb(0 0 60 / 15%) 0px 2px 30px 0px, rgb(0 0 80 / 6%) 0px 1px 3px 0px",
             transform: ["translateY(100%)", null],
             sizeKey: "h"
+        },
+        resizer: {
+            width: "full",
+            transform: "translateY(-100%)",
         },
         arrow: {
             right: 0,
@@ -158,7 +163,8 @@ const Dashboard = ({ appStore, stateStore, position = "bottom" }) => {
     const { sizeKey, ...wrapperProps } = _positions[position].wrapper
 
     return <Box pos="fixed" ref={ref} zIndex="9999" borderBottomStyle="solid" display="flex" flexDirection="column"
-        transition="all .3s ease-in-out" transform="translateX(0px) translateY(0px)"
+        transition="all .3s ease-in-out"
+        transform="translateX(0px) translateY(0px)"
         bg={useColorModeValue("white", "gray.800")}
         {...wrapperProps}
         {...{[sizeKey]: appStore.dashboardSize}}
@@ -171,6 +177,14 @@ const Dashboard = ({ appStore, stateStore, position = "bottom" }) => {
             outline-color: var(--chakra-colors-${appStore.colorScheme}-300) !important
         }
         `} />
+
+        {/* resizer */}
+        <Resizer target={ref} direction="y" onResizeEnd={(e) => {
+            // store the size to config
+            appStore.setDashboardSize(e.height) // TODO: bottom and top
+        }}>
+            <Box position="absolute" h="2"  {..._positions[position].resizer} />
+        </Resizer>
 
         {/* arrow to toggle the dashboard */}
         <Box {..._positions[position].arrow}

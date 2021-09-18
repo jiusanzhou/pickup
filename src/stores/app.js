@@ -74,12 +74,15 @@ export class AppStore {
     }
 
     changeRenderMode() {
-        console.log("======>", this.enableRender)
         this.enableRender = !this.enableRender
     }
 
     setSelectorType(t) {
         this.selectorType = t
+    }
+
+    setDashboardSize(e) {
+        this.dashboardSize = e
     }
 }
 
