@@ -68,10 +68,12 @@ const clientHook = () => {
 
     // hook AJAX API
     xhook.before((request) => {
-        let url = new URL(request.url)
-        if (url.origin !== _proxyOrigin) {
-            request.headers[_proxyTargetKey] = url.origin
-            request.url = _proxyOrigin + request.url.slice(url.origin.length)
+        if (request.url.startsWith("http")) {
+            let url = new URL(request.url)
+            if (url.origin !== _proxyOrigin) {
+                request.headers[_proxyTargetKey] = url.origin
+                request.url = _proxyOrigin + request.url.slice(url.origin.length)
+            }
         }
     })
 
