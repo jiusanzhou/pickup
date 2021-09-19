@@ -17,10 +17,13 @@ const SiteInfo = ({ appStore, stateStore }) => {
     
     return <Flex alignItems="center">
         <Avatar name={title} p="1" bg={theme||'gray.200'} borderRadius=".35rem" size="sm" src={icon} />
-        <Text ml="2" isTruncated>{title}</Text>
-        <Input px="2" py="1" ml="2"
+        <Text ml="2" isTruncated maxW="5rem">{title}</Text>
+        
+        <Box>
+            <Input px="2" py="1" ml="2"
             _focus={{  }}
             variant="unstyled" onChange={()=>{}} value={path} />
+        </Box>
     </Flex>
 }
 
