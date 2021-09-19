@@ -8,14 +8,14 @@ import Section from '../components/section';
 
 const Home = ({
   staticContext,
-  // match, history, location,
+  match, history, location,
   appStore,
   ...props
 }) => {
   return (
     <Flex w="full" {...props} justifyContent="center">
       <Section>
-        <Logo mt="10rem" />
+        <Logo mt={["7rem", "7rem", "7rem", "7rem", "10rem"]} />
 
         <Enter appStore={appStore} mt="1rem" />
       </Section>

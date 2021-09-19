@@ -218,6 +218,7 @@ const Dashboard = ({ appStore, stateStore, position = "bottom" }) => {
                     <Tabs colorScheme={appStore.colorScheme}>
                         <TabList>
                             {_tabs.map(({ title, disabled }) => <Tab key={title}
+                            isTruncated
                             isDisabled={disabled}>{title}</Tab>)}
                         </TabList>
                     </Tabs>
