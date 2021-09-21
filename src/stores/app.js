@@ -37,7 +37,7 @@ export class AppStore {
     // dashboard open or hide
     visible = true
     // dashboard size
-    dashboardSize = "30rem"
+    dashboardSize = "30vh"
     // enableRender
     enableRender = true
     // selectorType
